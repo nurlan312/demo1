@@ -1,4 +1,4 @@
-name: CI-CD-Pipelina-to-AWS-ElasticBeanstalk1
+name: CI-CD-Pipelina-to-AWS-ElasticBeanstalk
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "test-github-actions-test"
   EB_APPLICATION_NAME       : "Test-elastic-beanstalk"
@@ -58,7 +58,7 @@ jobs:
         --description "CommitSHA-${{ github.sha }}"
         
     - name: Deploy new ElasticBeanstalk application version 
-      run  : aws elasticbeanstalk update-environment --environment-name ${{ env.EB_APPLICATION_NAME }} --version-label Ver-${{ github.sha }}"
+      run  : aws elasticbeanstalk update-environment --environment-name ${{ env.EB_APPLICATION_NAME }} --version-label "Version-${{ github.sha }}"
        
     - name: Print happy message for CD finish
       run : echo "CD Pipeline part finished successully!"
