@@ -3,7 +3,7 @@ env:
   EB_PACKAGE_S3_BUCKET_NAME : "test-github-actions-test"
   EB_APPLICATION_NAME       : "Test-elastic-beanstalk"
   EB_ENVIRONMENT_NAME       : "Testelasticbeanstalk-env"
-  DEPLOY_PACKAGE_NAME       : "deploy_deploy_package_${{ github.sha }}.zip"
+  DEPLOY_PACKAGE_NAME       : "deploy_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "eu-central-1"
 
 on:
